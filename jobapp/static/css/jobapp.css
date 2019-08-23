@@ -1,0 +1,33 @@
+body{
+
+    background-color: #F7F0C6;
+
+}
+
+.applicants{
+
+    margin: 0px;
+    padding: 0px;
+    background-color: #abb6cb;
+
+}
+
+.head{
+
+    display: flex;
+    display:inline-block; 
+    margin: auto;
+
+}
+
+.header{
+        display: flex;
+        margin:auto;
+
+}
+
+.head p{
+
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+}

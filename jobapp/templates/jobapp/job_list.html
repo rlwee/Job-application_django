@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+    <head>
+        <title>
+            Applicants
+        </title>
+        <link rel="stylesheet" href="{% static 'css/jobapp.css' %}">
+    </head>
+
+    <body>
+        <div class="applicants">
+        <h1>Jobs lists</h1>
+        <a href="{% url 'job_new' %}">Create job</a>
+        </div>
+
+        <div class="head">
+        {% for job in jobs %}
+        <li>
+        <ul>ID:{{job.id }}</ul>
+        <ul>applied on:{{job.date_created }}</ul>
+        <ul>{{job.title }}</ul>
+        <ul>{{job.owner }}</ul>
+        <ul>{{job.category }}</ul>
+        </li>
+        {% endfor %}
+        </div>
+    </body>
+
+
+
+
+</html>
