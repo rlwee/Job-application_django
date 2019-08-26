@@ -1,33 +1,15 @@
-body{
+body {
 
-    background-color: #F7F0C6;
-
+    background-color: #C8EAD1;
+    
 }
 
-.applicants{
-
-    margin: 0px;
-    padding: 0px;
-    background-color: #abb6cb;
-
+h1 a, h2 a {
+    font-family: 'Lobster';
 }
 
-.head{
-
-    display: flex;
-    display:inline-block; 
-    margin: auto;
-
-}
-
-.header{
-        display: flex;
-        margin:auto;
-
-}
-
-.head p{
-
-    font-family: 'Courier New', Courier, monospace;
-    padding: 5px;
+.page-header{
+         background-color: #73C088;
+         margin-top: 0;
+         padding: 20px 20px 20px 40px;
 }

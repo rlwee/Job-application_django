@@ -1,32 +1,14 @@
-{% load static %}
-<html>
-    <head>
-        <title>
-            Applicants
-        </title>
-        <link rel="stylesheet" href="{% static 'css/jobapp.css' %}">
-    </head>
-
-    <body>
-        <div class="applicants">
-        <h1>Jobs lists</h1>
-        <a href="{% url 'job_new' %}">Create job</a>
-        </div>
-
-        <div class="head">
-        {% for job in jobs %}
-        <li>
-        <ul>ID:{{job.id }}</ul>
-        <ul>applied on:{{job.date_created }}</ul>
-        <ul>{{job.title }}</ul>
-        <ul>{{job.owner }}</ul>
-        <ul>{{job.category }}</ul>
-        </li>
-        {% endfor %}
-        </div>
-    </body>
-
-
-
-
-</html>
+{% extends 'jobapp/base.html' %}
+{% block content %}
+<div class="page-header">
+        <h1><a href="/">Applicants</a></h1>
+           <a href="{% url 'job_new' %}">Create job!</a>
+   </div>
+                {% for job in jobs %}
+                    <div>
+                        <p>published: {{ job.date_created }}</p>
+                        <h2><a href="{% url 'job_detail' pk=job.pk %}">{{ job.title }}</a></h2>
+                        <p>{{ job.category|linebreaksbr }}</p>
+                    </div>
+                {% endfor %}
+{% endblock %}
