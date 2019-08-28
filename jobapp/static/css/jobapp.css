@@ -13,3 +13,10 @@ h1 a, h2 a {
          margin-top: 0;
          padding: 20px 20px 20px 40px;
 }
+
+p a h2 {
+
+        display: inline-block;
+        margin: auto;
+
+}

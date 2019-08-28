@@ -1,0 +1,22 @@
+{% extends 'jobapp/base.html' %}
+{% block content %}
+    <div class="page-header">
+        <h1><a href="/">Categories</a></h1>
+
+    </div>
+
+    {% for cats in categories %}
+
+
+        <div>
+            <p>{{ cats }}</p>
+            <p>Applicant: {{ cats.owner }}</p>
+            <p>-</p>
+        </div>
+
+    {% endfor %}
+ 
+
+
+       
+{% endblock %}

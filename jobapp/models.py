@@ -32,4 +32,4 @@ class Application(models.Model):
 
 
     def __str__(self):
-        return str(self.user.name)
+        return str(self.job)
